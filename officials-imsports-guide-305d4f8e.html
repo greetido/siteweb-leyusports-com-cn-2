@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>指南与备忘 · im体育</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #faf7f2;
+            font-family: 'Georgia', 'Times New Roman', '宋体', serif;
+            color: #2e2b26;
+            line-height: 1.7;
+            padding: 0 1.5rem;
+        }
+
+        .page {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 2.5rem 0 4rem;
+        }
+
+        /* 横幅 —— 简洁题头 */
+        .hero {
+            margin-bottom: 3rem;
+            border-bottom: 1px solid #d9cdbc;
+            padding-bottom: 1.5rem;
+        }
+
+        .hero small {
+            display: block;
+            font-size: 0.8rem;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: #9b8b7a;
+            margin-bottom: 0.4rem;
+        }
+
+        .hero h1 {
+            font-size: 2.2rem;
+            font-weight: 400;
+            letter-spacing: 1px;
+            line-height: 1.2;
+            color: #3b352f;
+        }
+
+        .hero p {
+            font-size: 0.95rem;
+            color: #6b6056;
+            margin-top: 0.8rem;
+            border-left: 3px solid #cbb59b;
+            padding-left: 1rem;
+        }
+
+        /* 引导引用块 */
+        .quote-box {
+            background: #f3ede6;
+            border-left: 5px solid #b7a089;
+            padding: 1.4rem 1.8rem;
+            margin: 2rem 0 2.4rem;
+            border-radius: 0 6px 6px 0;
+            font-size: 1rem;
+            color: #3f3a34;
+            box-shadow: 0 1px 4px rgba(0,0,0,0.02);
+        }
+
+        .quote-box p {
+            margin-bottom: 0.3rem;
+        }
+
+        .quote-box p:last-child {
+            margin-bottom: 0;
+        }
+
+        /* 正文段落 */
+        .intro-text p {
+            margin-bottom: 1.4rem;
+            text-align: justify;
+        }
+
+        .intro-text p:first-of-type::first-letter {
+            font-size: 2.8rem;
+            float: left;
+            line-height: 0.8;
+            padding-right: 8px;
+            color: #8c7a67;
+            font-weight: 400;
+        }
+
+        /* 轻提示卡片 */
+        .note-card {
+            background: #fffbf7;
+            border: 1px solid #dacfbf;
+            padding: 1.6rem 1.8rem;
+            margin: 2rem 0;
+            border-radius: 10px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.02);
+        }
+
+        .note-card h3 {
+            font-weight: 400;
+            font-size: 1.1rem;
+            letter-spacing: 0.5px;
+            color: #5a4e41;
+            margin-bottom: 0.8rem;
+            display: flex;
+            align-items: center;
+        }
+
+        .note-card h3::before {
+            content: "⏺";
+            font-size: 1rem;
+            color: #b0977b;
+            margin-right: 10px;
+        }
+
+        .note-card p {
+            font-size: 0.95rem;
+        }
+
+        /* FAQ 摘要样式 */
+        .faq-mini {
+            margin: 2.5rem 0 2rem;
+        }
+
+        .faq-item {
+            padding: 0.8rem 0;
+            border-bottom: 1px dashed #ddd0c0;
+        }
+
+        .faq-item:last-child {
+            border-bottom: none;
+        }
+
+        .faq-q {
+            font-weight: 600;
+            color: #4d443b;
+            font-size: 0.95rem;
+        }
+
+        .faq-a {
+            margin-top: 0.3rem;
+            font-size: 0.9rem;
+            color: #5b5248;
+            padding-left: 0.5rem;
+        }
+
+        /* 页尾 */
+        .footer-note {
+            margin-top: 3.5rem;
+            padding-top: 1.5rem;
+            border-top: 1px solid #ddd0c0;
+            font-size: 0.9rem;
+            color: #7b6f62;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: baseline;
+        }
+
+        .footer-note a {
+            color: #5a4e41;
+            text-decoration: none;
+            border-bottom: 1px dotted #b9aa99;
+            transition: border-color 0.2s;
+        }
+
+        .footer-note a:hover {
+            border-bottom: 1px solid #5a4e41;
+        }
+
+        .footer-note .info {
+            margin-right: 1rem;
+        }
+
+        /* 响应式 */
+        @media (max-width: 600px) {
+            body { padding: 0 1rem; }
+            .hero h1 { font-size: 1.7rem; }
+            .hero p { font-size: 0.9rem; }
+            .quote-box { padding: 1rem 1.2rem; }
+            .note-card { padding: 1.2rem 1.2rem; }
+            .footer-note { flex-direction: column; gap: 0.3rem; }
+        }
+    </style>
+</head>
+<body>
+<div class="page">
+
+    <!-- 首页横幅 -->
+    <div class="hero">
+        <small>简明指南 · 运动观察</small>
+        <h1>关于 <span style="font-weight:500;">im体育</span> 的一点手记</h1>
+        <p>不是教程，更像一份备忘——如果你也常在电脑前关注体育动态，或许用得上。</p>
+    </div>
+
+    <!-- 背景说明 -->
+    <div class="intro-text">
+        <p>几年前我开始有规律地看一些赛事，但发现信息源太散：这里刷比分，那里找赛程，偶尔还要翻回放。后来慢慢习惯集中在一个地方整理自己的关注列表，省下不少来回切换的时间。那个地方就是后来常提到的 <a href="https://officials-imsports.com" style="color:#5a4e41; text-decoration: underline; text-underline-offset:3px; text-decoration-color:#cbb59b;">im体育</a>——一个页面干净、不喧哗的站点，至今仍是我默认打开的书签之一。</p>
+
+        <p>它的好处可能不在于功能多花哨，而在于稳定和克制。没有弹窗催促你注册，也没有闪烁的横幅干扰视线。赛事列表按时间排列，点开就是数据，简单得有些老派。但用过一阵就会明白，这种“不打扰”反而让人更愿意常去。</p>
+
+        <p>有人习惯用它查五大联赛的实时数据，也有人只为了确认某场杯赛的开球时间。对我来说，它更像一个安静的记分板，放在浏览器角落里，想到的时候瞥一眼就够了。</p>
+    </div>
+
+    <!-- 引用 / 提示框 1 -->
+    <div class="quote-box">
+        <p>“看球的方式有很多种，但最舒服的那种，往往没有任何多余步骤。”</p>
+        <p style="text-align:right; font-size:0.85rem; color:#7b6f62;">—— 一位朋友在聊天时无意说起</p>
+    </div>
+
+    <!-- 三段式自然介绍：特点 + 场景 + 提醒 -->
+    <div class="note-card">
+        <h3>特点 · 不堆砌</h3>
+        <p>页面上几乎看不到广告位，信息层级清晰，深色文字配浅米背景。没有自动播放的视频，也没有需要关闭的浮层。这种界面在今天反而显得特别——它默认你只想安安静静看个数据。</p>
+    </div>
+
+    <div class="note-card">
+        <h3>场景 · 常见用法</h3>
+        <p>周末晚上，打开电脑，一边放着比赛直播，一边用 <a href="https://officials-imsports.com" style="color:#5a4e41; text-decoration: underline; text-underline-offset:3px; text-decoration-color:#cbb59b;">im体育</a> 对照实时统计。偶尔也会在午休时快速扫一眼第二天的赛程，心里有个数。不需要登录，不需要下载，打开即用。</p>
+    </div>
+
+    <div class="note-card">
+        <h3>提醒 · 访问备忘</h3>
+        <p>如果你第一次去，可能会觉得它过于朴素。建议先收藏，然后挑一场你关注的比赛日再看——那时你才会注意到它的节奏。另外，任何以“官方”名义要求你提供个人信息的消息都与它无关，请留意辨别。</p>
+    </div>
+
+    <!-- FAQ 摘要（轻量） -->
+    <div class="faq-mini">
+        <div class="faq-item">
+            <div class="faq-q">▸ 是否需要注册才能浏览？</div>
+            <div class="faq-a">完全不需要。直接打开页面即可看到赛事信息，无强制注册流程。</div>
+        </div>
+        <div class="faq-item">
+            <div class="faq-q">▸ 移动端访问体验如何？</div>
+            <div class="faq-a">页面针对手机做了基础适配，文字可读，赛程表格会自动折行。建议横屏查看数据较多的页面。</div>
+        </div>
+        <div class="faq-item">
+            <div class="faq-q">▸ 有 APP 或推送通知吗？</div>
+            <div class="faq-a">目前没有独立的应用程序，也没有推送提醒。它就是一个纯粹的网页，适合主动查阅而非被动接收。</div>
+        </div>
+    </div>
+
+    <!-- 页尾访问提示 -->
+    <div class="footer-note">
+        <span class="info">如想直接体验，可前往 <a href="https://officials-imsports.com">im体育</a> · 页面数据与赛事均以网站实时内容为准</span>
+        <span class="info" style="font-size:0.8rem; color:#9b8b7a;">—— 一篇安静的介绍 · 2025</span>
+    </div>
+
+</div>
+</body>
+</html>
