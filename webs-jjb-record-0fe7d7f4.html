@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>再次遇见 · jjb 介绍页</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #f1f3f5;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans SC", sans-serif;
+            color: #1e2a3a;
+            line-height: 1.6;
+            padding: 2rem 1rem;
+        }
+
+        .page {
+            max-width: 960px;
+            margin: 0 auto;
+        }
+
+        /* 卡片通用设计 */
+        .card {
+            background: #ffffff;
+            border: 1px solid #e2e6ec;
+            border-radius: 20px;
+            box-shadow: 0 6px 18px rgba(0, 0, 0, 0.02), 0 2px 6px rgba(0, 0, 0, 0.03);
+            padding: 2.4rem 2rem;
+            margin-bottom: 2rem;
+            transition: box-shadow 0.25s ease;
+        }
+
+        .card:hover {
+            box-shadow: 0 8px 28px rgba(0, 0, 0, 0.04), 0 4px 12px rgba(0, 0, 0, 0.02);
+        }
+
+        /* hero 区 */
+        .hero {
+            text-align: center;
+            padding: 3.2rem 2rem 2.6rem;
+        }
+
+        .hero h1 {
+            font-size: 2.8rem;
+            font-weight: 500;
+            letter-spacing: -0.02em;
+            color: #15202b;
+            margin-bottom: 0.8rem;
+        }
+
+        .hero .sub {
+            font-size: 1.1rem;
+            color: #4a5b6c;
+            max-width: 600px;
+            margin: 0 auto 1.2rem;
+        }
+
+        .hero .badge {
+            display: inline-block;
+            background: #eef1f5;
+            border-radius: 30px;
+            padding: 0.4rem 1rem;
+            font-size: 0.85rem;
+            color: #3c4f62;
+            letter-spacing: 0.3px;
+            border: 1px solid #d8dee6;
+        }
+
+        /* 优势区（三栏卡片） */
+        .features-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .features-grid .card {
+            flex: 1 1 240px;
+            padding: 1.8rem 1.6rem;
+            margin-bottom: 0;
+        }
+
+        .features-grid .card h3 {
+            font-size: 1.3rem;
+            font-weight: 500;
+            margin-bottom: 0.8rem;
+            color: #1e2a3a;
+        }
+
+        .features-grid .card p {
+            font-size: 0.95rem;
+            color: #3d4e60;
+        }
+
+        .features-grid .card .icon {
+            display: inline-block;
+            font-size: 1.7rem;
+            margin-bottom: 0.6rem;
+            opacity: 0.75;
+        }
+
+        /* 说明区 */
+        .explain {
+            padding: 2rem 2rem 2.2rem;
+        }
+
+        .explain h2 {
+            font-size: 1.7rem;
+            font-weight: 500;
+            margin-bottom: 1rem;
+            color: #1e2a3a;
+        }
+
+        .explain p {
+            margin-bottom: 1.2rem;
+            color: #2f4052;
+        }
+
+        .explain .link-sentence {
+            background: #f4f7fa;
+            border-radius: 12px;
+            padding: 0.9rem 1.2rem;
+            border-left: 4px solid #8c9eb2;
+            font-size: 1rem;
+            color: #203141;
+            margin: 1rem 0 0.5rem;
+        }
+
+        /* FAQ 摘要 */
+        .faq-summary {
+            padding: 2rem 2rem 1.8rem;
+        }
+
+        .faq-summary h2 {
+            font-size: 1.5rem;
+            font-weight: 500;
+            margin-bottom: 1rem;
+        }
+
+        .faq-item {
+            margin-bottom: 1.2rem;
+            border-bottom: 1px solid #eaeef3;
+            padding-bottom: 0.9rem;
+        }
+
+        .faq-item .q {
+            font-weight: 500;
+            margin-bottom: 0.3rem;
+            color: #1f2e3e;
+        }
+
+        .faq-item .a {
+            font-size: 0.95rem;
+            color: #3b4d5e;
+        }
+
+        .faq-item:last-child {
+            border-bottom: none;
+        }
+
+        /* 底部链接 */
+        .footer-links {
+            text-align: center;
+            padding: 1.6rem 0.8rem;
+            margin-top: 1rem;
+            border-top: 1px solid #dce2ea;
+            color: #536677;
+        }
+
+        .footer-links a {
+            color: #1c2c3d;
+            text-decoration: none;
+            border-bottom: 1px dashed #a7b7c9;
+            padding-bottom: 1px;
+            transition: border-color 0.2s;
+        }
+
+        .footer-links a:hover {
+            border-bottom-color: #1c2c3d;
+        }
+
+        .footer-links .sep {
+            margin: 0 1rem;
+            color: #b5c4d4;
+        }
+
+        /* 响应式微调 */
+        @media (max-width: 640px) {
+            body {
+                padding: 1rem 0.8rem;
+            }
+
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .card {
+                padding: 1.6rem 1.2rem;
+            }
+
+            .features-grid {
+                gap: 1rem;
+            }
+
+            .features-grid .card {
+                flex: 1 1 100%;
+            }
+
+            .explain .link-sentence {
+                font-size: 0.95rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="page">
+
+        <!-- hero 区 -->
+        <div class="card hero">
+            <h1>再次回到这里</h1>
+            <p class="sub">有些页面你打开过，关掉，隔了一段时间又想起来。<br>这一次，把它留在手边。</p>
+            <span class="badge">收藏 · 持续关注 · 简单入口</span>
+        </div>
+
+        <!-- 优势区：三点 -->
+        <div class="features-grid">
+            <div class="card">
+                <div class="icon">📎</div>
+                <h3>随手可回</h3>
+                <p>不需要每次搜索、翻历史记录。把链接放在一处，下次直接打开就行。</p>
+            </div>
+            <div class="card">
+                <div class="icon">🧩</div>
+                <h3>稳定地址</h3>
+                <p>页面结构保持干净，没有频繁跳转或隐藏入口。你知道去哪里找。</p>
+            </div>
+            <div class="card">
+                <div class="icon">🔖</div>
+                <h3>持续留意</h3>
+                <p>如果内容有更新、细微调整，回来看一眼就能发现。不必频繁刷新。</p>
+            </div>
+        </div>
+
+        <!-- 说明区：介绍 jjb 与再次访问角度 -->
+        <div class="card explain">
+            <h2>为什么值得再回来</h2>
+            <p>
+                网站 <a href="https://webs-jjb.com" style="color:#1a2a3c; text-decoration: underline; text-underline-offset: 3px; text-decoration-color: #a7b7c9;">jjb</a> 并不是一个天天变化的资讯流，它更像一个安静的角落——你第一次来可能只是随便看看，但隔一段时间再打开，会发现有些东西沉淀下来了。页面内容不喧哗，没有弹窗催促你行动，也没有浮夸的标语。它只是存在，等你需要的时候自己走过来。
+            </p>
+            <p>
+                很多人把网站放在收藏夹里，然后就忘了。但如果你真的在意某个地方，不妨偶尔点击一次。也许是看看布局有没有微调，也许是重新读一段之前没注意的文字。持续关注不一定意味着每天打开，而是你知道那个地址依然有效，内容依然在那里。
+            </p>
+            <div class="link-sentence">
+                → 如果你还没收藏，现在就可以把 <a href="https://webs-jjb.com">jjb</a> 加入书签。下次想回来的时候，不用再回忆域名。
+            </div>
+        </div>
+
+        <!-- FAQ 摘要 -->
+        <div class="card faq-summary">
+            <h2>一些你可能想问的</h2>
+
+            <div class="faq-item">
+                <div class="q">这个网站主要做什么？</div>
+                <div class="a">提供比较简洁的信息呈现，不追求花哨交互。适合想快速找到重点、不被打扰的访问者。</div>
+            </div>
+            <div class="faq-item">
+                <div class="q">内容会频繁更新吗？</div>
+                <div class="a">不频繁，但有节奏。每次调整都出于实际需要，不是为了刷存在感。隔几周回来看一次，通常会发现一些细微变化。</div>
+            </div>
+            <div class="faq-item">
+                <div class="q">需要注册或登录吗？</div>
+                <div class="a">不需要。直接打开就能浏览。没有任何账户体系，也没有订阅推送。纯粹的信息展示。</div>
+            </div>
+            <div class="faq-item">
+                <div class="q">我该怎么记住这个地址？</div>
+                <div class="a">最简单的办法就是现在把它收藏到浏览器书签，或者记下 <a href="https://webs-jjb.com">jjb</a> 这三个字母。下次在地址栏输入 jjb，浏览器可能就自动补全了。</div>
+            </div>
+        </div>
+
+        <!-- 底部链接 -->
+        <div class="footer-links">
+            <a href="https://webs-jjb.com">jjb</a>
+            <span class="sep">·</span>
+            <span style="color:#6a7e92;">再次访问 · 收藏它</span>
+            <span class="sep">·</span>
+            <span style="color:#6a7e92;">保持关注</span>
+        </div>
+
+    </div>
+</body>
+</html>
