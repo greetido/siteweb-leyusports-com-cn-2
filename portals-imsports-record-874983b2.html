@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>im体育 · 一种自然融入生活的运动体验</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+      background: #f5f7fa;
+      color: #1f2937;
+      line-height: 1.7;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .hero {
+      background: linear-gradient(145deg, #0a1828 0%, #1a2a3a 100%);
+      padding: 4rem 2rem 3.5rem;
+      text-align: center;
+      color: #e9edf2;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+    }
+
+    .hero h1 {
+      font-size: 2.6rem;
+      font-weight: 500;
+      letter-spacing: 1px;
+      margin-bottom: 0.75rem;
+      color: #f0f4fa;
+    }
+
+    .hero .sub {
+      font-size: 1.1rem;
+      opacity: 0.78;
+      max-width: 600px;
+      margin: 0 auto;
+      font-weight: 350;
+    }
+
+    .container {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 2.5rem 1.5rem 3rem;
+    }
+
+    .section-card {
+      background: #ffffff;
+      border-radius: 24px;
+      padding: 2rem 2.2rem;
+      margin-bottom: 2.2rem;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.02), 0 1px 3px rgba(0, 0, 0, 0.03);
+      transition: box-shadow 0.2s ease;
+    }
+
+    .section-card:hover {
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.04);
+    }
+
+    .section-card h2 {
+      font-size: 1.6rem;
+      font-weight: 470;
+      margin-bottom: 0.75rem;
+      border-left: 4px solid #2563eb;
+      padding-left: 1rem;
+      color: #111827;
+    }
+
+    .section-card p {
+      margin-bottom: 1rem;
+      font-size: 1rem;
+    }
+
+    .section-card p:last-child {
+      margin-bottom: 0;
+    }
+
+    .highlights-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+      gap: 1.2rem;
+      margin: 1.5rem 0 0.5rem;
+    }
+
+    .highlight-item {
+      background: #f3f6fd;
+      border-radius: 18px;
+      padding: 1.2rem 1.2rem 1.4rem;
+      border: 1px solid #e9edf4;
+    }
+
+    .highlight-item h3 {
+      font-size: 1.1rem;
+      font-weight: 500;
+      color: #1e3a5f;
+      margin-bottom: 0.35rem;
+    }
+
+    .highlight-item p {
+      font-size: 0.93rem;
+      color: #3c4b5c;
+      margin: 0;
+    }
+
+    .inline-link {
+      color: #2563eb;
+      text-decoration: none;
+      font-weight: 480;
+      border-bottom: 1px solid transparent;
+      transition: border-color 0.15s, color 0.15s;
+    }
+
+    .inline-link:hover {
+      border-bottom-color: #2563eb;
+      color: #1d4ed8;
+    }
+
+    .scenario-block {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      margin-top: 1.2rem;
+    }
+
+    .scenario-item {
+      flex: 1 1 180px;
+      background: #fafbfd;
+      border-radius: 18px;
+      padding: 1.2rem 1rem;
+      border: 1px solid #eef2f8;
+    }
+
+    .scenario-item strong {
+      display: block;
+      margin-bottom: 0.25rem;
+      color: #1e293b;
+      font-weight: 500;
+    }
+
+    .scenario-item span {
+      font-size: 0.92rem;
+      color: #475569;
+    }
+
+    .faq-mini {
+      margin-top: 1rem;
+    }
+
+    .faq-q {
+      font-weight: 500;
+      margin: 1rem 0 0.25rem;
+      color: #0f172a;
+    }
+
+    .faq-q:first-of-type {
+      margin-top: 0.5rem;
+    }
+
+    .faq-a {
+      font-size: 0.96rem;
+      padding-left: 0.2rem;
+      color: #334155;
+    }
+
+    .note-box {
+      background: #f8faff;
+      border: 1px solid #dce3ed;
+      border-radius: 18px;
+      padding: 1.4rem 1.6rem;
+      margin: 1.5rem 0 0.5rem;
+    }
+
+    .note-box p {
+      margin: 0.3rem 0;
+      font-size: 0.96rem;
+    }
+
+    .footer-bar {
+      text-align: center;
+      padding: 2rem 1.5rem 2.2rem;
+      font-size: 0.85rem;
+      color: #6b7a8c;
+      border-top: 1px solid #e2e8f0;
+      background: #f9fafc;
+      margin-top: 1rem;
+    }
+
+    @media (max-width: 600px) {
+      .hero h1 {
+        font-size: 2rem;
+      }
+      .section-card {
+        padding: 1.5rem 1.2rem;
+      }
+      .highlights-grid {
+        grid-template-columns: 1fr;
+      }
+      .scenario-block {
+        flex-direction: column;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Hero 深色头图 -->
+  <header class="hero">
+    <h1>运动不止于赛场</h1>
+    <p class="sub">从日常的每一次跑动、每一次挥拍，到沉浸其中的节奏与专注——<br>im体育 让运动回归自然表达。</p>
+  </header>
+
+  <!-- 主体内容区 浅色 -->
+  <main class="container">
+
+    <!-- 摘要 / 产品说明 -->
+    <section class="section-card">
+      <h2>一种有温度的陪伴</h2>
+      <p><a href="https://portals-imsports.com" class="inline-link">im体育</a> 不是冰冷的工具，也不是遥远的舞台。它更像一个开放、轻盈的聚合节点，让每个对运动怀有热情的人，能找到适合自己的节奏与连接。不论你是刚接触某项运动的新手，还是已经养成锻炼习惯的爱好者，这里都有一片开阔的地带。</p>
+      <p>我们提倡“运动生活化”——不必设定过高的标杆，也无需被数据绑架。重要的是，你在其中感到舒适、持续、有获得感。</p>
+    </section>
+
+    <!-- 亮点卡片 -->
+    <section class="section-card">
+      <h2>几个值得留意的亮点</h2>
+      <div class="highlights-grid">
+        <div class="highlight-item">
+          <h3>轻量 &amp; 聚焦</h3>
+          <p>界面干净、信息直接，没有冗余干扰。你可以更快找到自己关心的内容。</p>
+        </div>
+        <div class="highlight-item">
+          <h3>多视角内容</h3>
+          <p>既有运动知识、场景解读，也有真实用户的经验分享，不堆砌术语。</p>
+        </div>
+        <div class="highlight-item">
+          <h3>社区氛围自然</h3>
+          <p>不制造焦虑，不鼓吹“速成”。大家因为喜欢运动而聚集，交流本身就很舒服。</p>
+        </div>
+        <div class="highlight-item">
+          <h3>跨平台友好</h3>
+          <p>无论手机还是电脑，页面适配流畅，随时随地都能顺手打开看看。</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 使用建议 / 场景 -->
+    <section class="section-card">
+      <h2>适合这样去体验</h2>
+      <p>不必把这里当作必须完成的计划。你可以按照自己的节奏，慢慢探索。下面是几种常见的打开方式：</p>
+      <div class="scenario-block">
+        <div class="scenario-item">
+          <strong>通勤间隙</strong>
+          <span>等车、午休时简单浏览，获取一点运动灵感或小技巧。</span>
+        </div>
+        <div class="scenario-item">
+          <strong>运动前后</strong>
+          <span>热身或拉伸时顺手翻翻，看看别人怎么安排训练节奏。</span>
+        </div>
+        <div class="scenario-item">
+          <strong>周末放松</strong>
+          <span>花十几分钟深入阅读某个运动话题，或者参与讨论。</span>
+        </div>
+        <div class="scenario-item">
+          <strong>纯粹闲逛</strong>
+          <span>不需要带着目的，只是随便看看，有时反而能发现惊喜。</span>
+        </div>
+      </div>
+      <p style="margin-top: 1rem;">如果你愿意，也可以把它当作一个安静的参考系——不催促你，不过度推荐，一切由你决定。</p>
+    </section>
+
+    <!-- 可信但克制的访问说明 + FAQ 摘要 -->
+    <section class="section-card">
+      <h2>一些基本信息</h2>
+      <div class="note-box">
+        <p><strong>访问提示</strong> · 网站 <a href="https://portals-imsports.com" class="inline-link">im体育</a> 是一个公开的信息平台，内容由用户和编辑共同维护。所有观点仅供参考，请结合自身情况理性判断。</p>
+        <p>我们不承诺任何具体效果，也不做过度营销。运动本身存在一定风险，请量力而行，必要时咨询专业人士。</p>
+      </div>
+
+      <div class="faq-mini">
+        <p class="faq-q">需要注册才能浏览吗？</p>
+        <p class="faq-a">大部分内容无需注册即可阅读。部分互动功能可能需要简单注册，但过程很轻。</p>
+
+        <p class="faq-q">内容更新频率如何？</p>
+        <p class="faq-a">保持稳定的更新，但更看重质量而非数量。你每次来，基本都能看到一些新东西。</p>
+
+        <p class="faq-q">适合运动新手吗？</p>
+        <p class="faq-a">当然。很多内容就是从零开始的视角写的，没有预设门槛。老手也能找到不同的理解角度。</p>
+      </div>
+    </section>
+
+    <!-- 最后一段自然收束 -->
+    <section class="section-card" style="background: #f7faff;">
+      <p style="font-size: 1rem;">我们相信，好的运动体验不是比拼数据，而是找到一种让自己舒服的持续状态。<a href="https://portals-imsports.com" class="inline-link">im体育</a> 的存在，就是希望为这种状态提供一个安静的注脚。你可以随时进来看看，也可以随时放下——它一直都在那里。</p>
+    </section>
+
+  </main>
+
+  <footer class="footer-bar">
+    <p>© 2025 · 自在运动，从心开始</p>
+  </footer>
+
+</body>
+</html>
